@@ -1,20 +1,8 @@
-# Software Developer Folio ⚡️ [![GitHub](https://img.shields.io/github/license/saadpasta/developer-portfolio?color=blue)](https://github.com/saadpasta/developerFolio/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/saadpasta/developerFolio)](https://github.com/saadpasta/developerFolio/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
+# DevOps Portfolio ⚡️
 
-## A clean, beautiful and responsive portfolio template for DevSecOps Engoineers!
+## A clean, beautiful and responsive portfolio for DevOps & Cloud Engineers
 
-
-<p align="center">
-  <kbd>
-<img src="https://user-images.githubusercontent.com/53429438/106779355-e9cd9e80-666c-11eb-9417-8a4b54441bc6.gif"></img>
-  </kbd>
-</p>
-
-
-Just change `src/portfolio.js` to get your personal portfolio. Customize portfolio theme by using your own color scheme globally in the  `src/_globalColor.scss` file. Feel free to use it as-is or personalize it as much as you want.
-
-If you'd like to **contribute** and make this much better for other users, have a look at [Issues](https://github.com/saadpasta/developerFolio/issues).
-
-Created something awesome for your fork of the portfolio and want to share it? Feel free to open a [pull request](https://github.com/saadpasta/developerFolio/pulls).
+Customize your portfolio by editing `src/portfolio.js` and personalize the theme globally in `src/_globalColor.scss`.
 
 ## Table of Contents
 - [Sections](#sections)
@@ -44,7 +32,7 @@ Created something awesome for your fork of the portfolio and want to share it? F
 ✔️ Twitter Timeline\
 ✔️ GitHub Profile
 
-To view a live example, **[click here](https://developerfolio.js.org/)**.
+
 
 
 ## Getting Started
@@ -60,22 +48,22 @@ git@2.17.1 or higher
 ```
 ### Docker Commands
 
-```
-1) BUILD IMAGE : docker build -t developerfolio:latest .
-2) RUN IMAGE: docker run -t -p 3000:3000 developerfolio:latest
+```bash
+1) BUILD IMAGE : docker build -t devops-portfolio:latest .
+2) RUN IMAGE: docker run -t -p 3000:3000 devops-portfolio:latest
 ```
 
 
 ## How To Use 
 
-From your command line, clone and run developerFolio:
+From your command line, clone and run the portfolio:
 
 ```bash
 # Clone this repository
-git clone https://github.com/saadpasta/developerFolio.git
+git clone https://github.com/YOUR-USERNAME/DevOps-Portfolio.git
 
 # Go into the repository
-cd developerFolio
+cd DevOps-Portfolio
 
 # Setup default environment variables
 
@@ -124,12 +112,10 @@ Set `showGithubProfile` to true or false to show Contact Profile using GitHub, d
 
 **Warning:** Treat your tokens like passwords and keep them secret. When working with the API, use tokens as environment variables instead of hardcoding them into your programs.
 
-Note: Open Source Projects section only show pinned items of your GitHub.
+Note: Open Source Projects section only shows pinned items from your GitHub profile.
 If you are seeing something as shown below, follow these [instructions](https://docs.github.com/en/enterprise/2.13/user/articles/pinning-items-to-your-profile).
 
 ![ERROR](https://i.imgur.com/Hj6mu1K.png)
-
-If the above solution still doesn't work, visit the [wiki page](https://github.com/saadpasta/developerFolio/wiki/Github-Setup-For-Open-Source-Projects).
 
 ## Linking blogs section to Medium
 
@@ -151,22 +137,20 @@ Set `displayMediumBlogs` to true or false in portofolio.js to display fetched Me
 #### Personalize page content in `/src/portfolio.js` & modify it as per your need. You will also need to modify `index.html` to change the title and metadata to provide accurate SEO for your personal portfolio.
 
 ```javascript
-/* Change this file to get your Personal Porfolio */
+/* Change this file to get your Personal Portfolio */
 
 const greeting = {
   /* Your Summary And Greeting Section */
-  title: "Hi all I'm Saad",
-  subTitle: emoji("A passionate Full Stack Software Developer 🚀"),
-  resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing"
+  title: "Hi, I'm [Your Name]",
+  subTitle: emoji("A passionate DevOps Engineer 🚀"),
+  resumeLink: "YOUR_RESUME_LINK_HERE"
 };
 
 const socialMediaLinks = {
-  /* Your Social Media Link */
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7"
+  /* Your Social Media Links */
+  github: "https://github.com/YOUR_USERNAME",
+  linkedin: "https://www.linkedin.com/in/YOUR_USERNAME/",
+  gmail: "your.email@gmail.com"
 };
 
 
@@ -223,9 +207,9 @@ The Profile and the Repository information from GitHub is only created at the ti
 
 This section guides you to deploy your portfolio on GitHub pages.
 
-- Navigate to `package.json` and enter your domain name instead of `https://developerfolio.js.org/` in `homepage` variable. For example, if you want your site to be `https://<your-username>.github.io/developerFolio`, add the same to the homepage section of `package.json`.
+- Navigate to `package.json` and enter your domain name instead of `https://developerfolio.js.org/` in `homepage` variable. For example, if you want your site to be `https://<your-username>.github.io/DevOps-Portfolio`, add the same to the homepage section of `package.json`.
 
-- In short you can also add `/devloperFolio` to `package.json` as both are exactly same. Upon doing so, you tell `create-react-app` to add the path assets accordingly.
+- In short you can also add `/DevOps-Portfolio` to `package.json` as both are exactly same. Upon doing so, you tell `create-react-app` to add the path assets accordingly.
 
 - Optionally, configure the domain. You can configure a custom domain with GitHub Pages by adding a `CNAME` file to the `public/` folder.
 
@@ -234,8 +218,6 @@ This section guides you to deploy your portfolio on GitHub pages.
 #### Deploying to Netlify
 
 You could also host directly with Netlify by linking your own repository.
-
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/saadpasta/developerFolio)
 
 For more information, read [hosting on Netlify](https://create-react-app.dev/docs/deployment/#netlify).
 

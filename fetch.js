@@ -1,7 +1,15 @@
-fs = require("fs");
+const fs = require("fs");
 const https = require("https");
-process = require("process");
-require("dotenv").config();
+const process = require("process");
+
+// Load environment variables from .env when available. If the dotenv
+// package isn't installed (for example when only production
+// dependencies are installed), skip loading instead of crashing.
+try {
+  require("dotenv").config();
+} catch (e) {
+  console.warn("[fetch.js] dotenv not found, skipping .env loading");
+}
 
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
@@ -108,7 +116,7 @@ if (MEDIUM_USERNAME !== undefined) {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestMediumFailed);
+      throw new Error(ERR.requestFailedMedium);
     }
 
     res.on("data", d => {
