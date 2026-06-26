@@ -45,13 +45,13 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/rekid46/",
+  github: "https://github.com/opswithranjan",
   linkedin: "https://www.linkedin.com/in/ranjan-singh-335845206/",
-  gmail: "singhtanjan9024@gmail.com",
-  gitlab: "https://gitlab.com/rekid46",
+  gmail: "singhranjan9024@gmail.com",
+  gitlab: "https://gitlab.com/opswithranjan",
   facebook: "https://www.facebook.com/lifeofranjan",
-  medium: "https://medium.com/@rekid46",
-  stackoverflow: "https://stackoverflow.com",
+  medium: "https://medium.com/@opswithranjan",
+  stackoverflow: "", // TODO: add your real Stack Overflow profile URL, or leave empty to hide the icon
   instagram: "https://instagram.com/simply.ranjan",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
@@ -146,7 +146,7 @@ const educationInfo = {
       schoolName: "Poornima Institute of Engineering and Technology",
       logo: pietLogo,
       subHeader: "Bachelor of Technology in Computer Science",
-      duration: "Augest 2018 - July 2022",
+      duration: "August 2018 - July 2022",
       desc: "Participated in the research of DevSecops Trends and published 3 papers.",
       descBullets: [
         "Ranked top 10% in the program.",
@@ -210,7 +210,7 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  showGithubProfile: "false", // Set "true" only when GitHub data is fetched at build time (see README env setup); otherwise it triggers a failed /profile.json fetch
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -218,7 +218,7 @@ const openSource = {
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "STARTUPS AND COMPANIES I'VE HELPED BUILD THEIR TECH",
   projects: [
     {
       image: medius1Image,
@@ -239,7 +239,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: "https://raje.pro"
+          url: "https://github.com/opswithranjan/Portfolio"
         }
       ]
     }
@@ -261,12 +261,10 @@ const achievementSection = {
       subtitle:
         "Demonstrated mastery in implementing DevOps practices on the Microsoft Azure platform, showcasing advanced skills in automating workflows, optimizing delivery pipelines, and ensuring seamless collaboration between development and operations teams.",
       image: msftExpertImage,
-      imageAlt: "Az-400 logo",
+      imageAlt: "Microsoft Certified DevOps Engineer Expert badge",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        }
+        // TODO: add your real AZ-400 verification/credential URL, then restore the button:
+        // {name: "Verify", url: "https://learn.microsoft.com/api/credentials/share/..."}
       ]
     },
     {
@@ -274,12 +272,10 @@ const achievementSection = {
       subtitle:
         "Validated proficiency in deploying, managing, and maintaining Azure resources, demonstrating expertise in implementing and monitoring cloud solutions on the Microsoft Azure platform.",
       image: azureAdminImage,
-      imageAlt: "Google Assistant Action Logo",
+      imageAlt: "Microsoft Azure Administrator Associate badge",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
+        // TODO: add your real AZ-104 verification/credential URL, then restore the button:
+        // {name: "Verify", url: "https://learn.microsoft.com/api/credentials/share/..."}
       ]
     },
     
@@ -287,24 +283,20 @@ const achievementSection = {
       title: "Linux Foundation Certified Kubernetes Administrator (CKA)",
       subtitle: "Validated proficiency in Kubernetes administration, showcasing skills in deploying and managing containerized applications.",
       image: ckaImage,
-      imageAlt: "Logo",
+      imageAlt: "Certified Kubernetes Administrator (CKA) badge",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://raje.pro/"
-        }
+        // TODO: add your real CKA verification URL (credly.com/badges/...), then restore the button:
+        // {name: "Verify", url: "https://www.credly.com/badges/..."}
       ]
     },
     {
       title: "Linux Foundation Certified Kubernetes Security Specialist (CKS)",
       subtitle: "Recognized expertise in securing Kubernetes clusters and ensuring robust containerized application environments.",
       image: cksImage,
-      imageAlt: "Logo",
+      imageAlt: "Certified Kubernetes Security Specialist (CKS) badge",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://raje.pro/"
-        }
+        // TODO: add your real CKS verification URL (credly.com/badges/...), then restore the button:
+        // {name: "Verify", url: "https://www.credly.com/badges/..."}
       ]
     }
   ],
@@ -318,20 +310,8 @@ const blogSection = {
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
   displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
+  // TODO: add your own posts here, or set MEDIUM_USERNAME in env to auto-fetch, then flip display to true
+  blogs: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -343,14 +323,8 @@ const talkSection = {
     "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
   ),
 
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest",
-      slides_url: "https://bit.ly/slides",
-      event_url: "https://www.facebook.com//"
-    }
-  ],
+  // TODO: add your own talks here, then flip display to true
+  talks: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -360,10 +334,8 @@ const podcastSection = {
   title: emoji("Podcast 🎙️"),
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/"
-  ],
+  // TODO: add your podcast embed link(s) here, then flip display to true
+  podcast: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -378,7 +350,7 @@ const contactInfo = {
 // Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
+  userName: "", // TODO: your X/Twitter username without @, then set display to true
   display: false // Set true to display this section, defaults to false
 };
 

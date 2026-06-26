@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Ranjan Singh — DevSecOps Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1120"/>
+      <stop offset="1" stop-color="#111c2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1e2a3d" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="473" x2="1200" y2="473"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+
+  <!-- accent bar -->
+  <rect x="90" y="250" width="64" height="8" rx="4" fill="url(#accent)"/>
+
+  <text x="90" y="220" font-family="Inter, Segoe UI, sans-serif" font-size="30" font-weight="600" fill="#2dd4bf" letter-spacing="2">&lt;/&gt; PORTFOLIO</text>
+
+  <text x="88" y="350" font-family="Inter, Segoe UI, sans-serif" font-size="92" font-weight="800" fill="#ffffff">Ranjan Singh</text>
+
+  <text x="90" y="420" font-family="Inter, Segoe UI, sans-serif" font-size="40" font-weight="500" fill="#cbd5e1">DevSecOps Engineer</text>
+
+  <text x="90" y="500" font-family="Inter, Segoe UI, sans-serif" font-size="26" font-weight="400" fill="#7c8aa0">Docker · Kubernetes · Terraform · AWS / Azure / GCP · CI/CD Security</text>
+</svg>
