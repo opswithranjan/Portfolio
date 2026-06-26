@@ -1,0 +1,244 @@
+@import "../../_globalColor";
+
+.career-main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  margin-top: 2rem;
+}
+
+.career-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.career-heading {
+  font-size: 56px;
+  font-weight: 700;
+  color: $titleColor;
+}
+
+.career-heading.dark-mode {
+  color: $textColorDark;
+}
+
+.career-subtitle {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.career-subtitle.dark-mode {
+  color: $textColorDark;
+}
+
+/* Timeline spine */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 35px;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  background: linear-gradient($buttonColor, $buttonHover);
+  border-radius: 3px;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 0 2.5rem 0;
+}
+
+.timeline-marker {
+  flex: 0 0 72px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.timeline-dot {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: $lightBackground1;
+  border: 3px solid $buttonColor;
+  box-shadow: 0 4px 14px $lightBoxShadow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.timeline-dot.dark-mode {
+  background: $darkBackground;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-dot img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.timeline-content {
+  flex: 1;
+  margin-left: 1.5rem;
+  background: $lightBackground1;
+  border: 1px solid $lightBorder1;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 6px 20px $lightBoxShadow;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px $lightBoxShadowDark;
+}
+
+.timeline-content.dark-mode {
+  background: $darkBackground;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.timeline-company-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.timeline-company {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  color: $titleColor;
+}
+
+.timeline-content.dark-mode .timeline-company {
+  color: $textColorDark;
+}
+
+.timeline-period {
+  font-size: 15px;
+  font-weight: 600;
+  color: $buttonColor;
+  white-space: nowrap;
+}
+
+.timeline-content.dark-mode .timeline-period {
+  color: $buttonHover;
+}
+
+.timeline-location {
+  margin: 0.25rem 0 0.5rem 0;
+  font-size: 14px;
+  color: $subTitle;
+}
+
+.timeline-desc {
+  margin: 0 0 1rem 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: $cardSubtitle;
+}
+
+.timeline-content.dark-mode .timeline-desc {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.timeline-roles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px dashed $lightBorder1;
+  margin-left: 4px;
+}
+
+.timeline-content.dark-mode .timeline-roles {
+  border-left-color: rgba(255, 255, 255, 0.18);
+}
+
+.timeline-role {
+  position: relative;
+  padding: 0.4rem 0 0.4rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+}
+
+.timeline-role::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.95rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $buttonColor;
+}
+
+.timeline-role:first-child::before {
+  background: $buttonHover;
+  box-shadow: 0 0 0 4px rgba(140, 67, 206, 0.25);
+}
+
+.timeline-role-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: $titleColor;
+}
+
+.timeline-content.dark-mode .timeline-role-title {
+  color: $textColorDark;
+}
+
+.timeline-role-date {
+  font-size: 13px;
+  color: $subTitle;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .career-heading {
+    font-size: 36px;
+  }
+  .career-subtitle {
+    font-size: 15px;
+  }
+  .timeline::before {
+    left: 27px;
+  }
+  .timeline-marker {
+    flex: 0 0 56px;
+  }
+  .timeline-dot {
+    width: 44px;
+    height: 44px;
+  }
+  .timeline-content {
+    margin-left: 1rem;
+    padding: 1rem 1.1rem;
+  }
+  .timeline-company {
+    font-size: 21px;
+  }
+  .timeline-role-title {
+    font-size: 15px;
+  }
+}
