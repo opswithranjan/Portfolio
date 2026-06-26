@@ -142,7 +142,7 @@ https://fontawesome.com/icons?d=gallery */
 // Education Section
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
   schools: [
     {
       schoolName: "Poornima Institute of Engineering and Technology",
@@ -188,22 +188,67 @@ const workExperiences = {
       role: "Senior Technical Support Engineer",
       company: "Cloudsmith",
       companylogo: csLogo,
-      date: "August 2024 - Present",
+      date: "Sep 2024 - Present",
       desc: "I'm a Senior Technical Support & Customer Success Engineer at Cloudsmith, where I solve complex customer challenges across CI/CD, package management, and DevOps integrations. I also build internal tooling and automation that improves how features are supported, helping customers get a smoother and more reliable experience.",
     },
     {
-      role: "DevSecOps Engineer",
-      company: "Fev India Pvt Ltd",
+      role: "Senior DevOps Engineer",
+      company: "FEV India Pvt Ltd",
       companylogo: fev11Logo,
-      date: "April 2022 - August 2024",
+      date: "Apr 2022 - Aug 2024",
       desc: "I streamlined the development and operations pipeline, ensuring efficient deployment and management of software solutions critical to automotive design, production, and testing processes. I ensured the secure development and deployment of automotive software solutions, maintaining best-in-class security practices within the DevOps lifecycle and mitigating cybersecurity risks in line with industry standards and regulations.",
     },
     {
-      role: "DevSecOps Engineer",
-      company: "Medius Technologies Pvt Ltd",
+      role: "DevOps Engineer",
+      company: "Medius.AI",
       companylogo: mediusLogo,
-      date: "Jan 2021 - Apr 2022",
+      date: "Jun 2020 - Apr 2022",
       desc: "I spearheaded the integration of development, security, and operations, ensuring the secure and efficient deployment of our cloud-based debt management solutions. I maintained security controls, conducted risk assessments, automated deployment processes, and guided the team in implementing secure coding practices."
+    }
+  ]
+};
+
+// Career Journey (vertical timeline). Most recent first.
+
+const careerTimeline = {
+  display: true,
+  title: "Career Journey",
+  subtitle:
+    "FROM DEVOPS ENGINEER TO SENIOR TECHNICAL SUPPORT, ONE STEP AT A TIME",
+  milestones: [
+    {
+      company: "Cloudsmith",
+      logo: csLogo,
+      period: "Sep 2024 - Present",
+      location: "Jaipur, India",
+      desc: "Solving complex customer challenges across CI/CD, package management, and DevOps integrations, and building internal tooling and automation that makes features easier to support.",
+      roles: [
+        {title: "Senior Technical Support Engineer", date: "Jul 2026 - Present"},
+        {
+          title: "Intermediate Technical Support Engineer",
+          date: "May 2025 - Jun 2026"
+        },
+        {title: "Technical Support Engineer", date: "Sep 2024 - Apr 2025"}
+      ]
+    },
+    {
+      company: "FEV India",
+      logo: fev11Logo,
+      period: "Apr 2022 - Aug 2024",
+      location: "Jaipur, India",
+      desc: "Streamlined the development and operations pipeline for automotive software, owning secure deployment and best-in-class DevOps security practices across the lifecycle.",
+      roles: [
+        {title: "Senior DevOps Engineer", date: "Apr 2024 - Aug 2024"},
+        {title: "DevOps Engineer", date: "Apr 2022 - Mar 2024"}
+      ]
+    },
+    {
+      company: "Medius.AI",
+      logo: mediusLogo,
+      period: "Jun 2020 - Apr 2022",
+      location: "Mumbai, India (Remote)",
+      desc: "Automated infrastructure provisioning with Terraform and supported secure, reliable deployment of cloud-based products as a DevOps and security engineer.",
+      roles: [{title: "DevOps Engineer", date: "Jun 2020 - Apr 2022"}]
     }
   ]
 };
@@ -378,6 +423,7 @@ export {
   educationInfo,
   techStack,
   workExperiences,
+  careerTimeline,
   openSource,
   bigProjects,
   achievementSection,
