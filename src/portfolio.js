@@ -5,7 +5,7 @@
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
-// Image assets (ESM imports — Vite bundles and hashes these)
+// Image assets (ESM imports, bundled and hashed by Vite)
 import pietLogo from "./assets/images/piet.jpg";
 import csLogo from "./assets/images/cs.png";
 import fev11Logo from "./assets/images/fev11.jpeg";
@@ -35,7 +35,7 @@ const greeting = {
   username: "Ranjan Singh",
   title: "Hi all, I'm Ranjan",
   subTitle: emoji(
-    "An enthusiastic DevSecOps Engineer 🚀 leveraging extensive experience in building secure and scalable cloud infrastructures with cutting-edge tools such as Docker, Kubernetes, Jenkins, Terraform, and AWS/GCP/Azure. Proficient in automating security, development, and operations tasks to drive faster time-to-market, improve product quality, and ensure robust cybersecurity controls."
+    "A DevSecOps engineer turned Senior Technical Support & Customer Success Engineer 🚀. I build secure, scalable cloud infrastructure with Docker, Kubernetes, Terraform, and AWS/GCP/Azure, and now help teams ship reliably by solving complex challenges across CI/CD, package management, and DevOps integrations at Cloudsmith."
   ),
   resumeLink:
     "https://drive.google.com/drive/folders/1ARoC2Lph1zdj57yz_xajGLuWjxtAxsOL?usp=sharing", // Set to empty to hide the button
@@ -45,13 +45,13 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/rekid46/",
+  github: "https://github.com/opswithranjan",
   linkedin: "https://www.linkedin.com/in/ranjan-singh-335845206/",
-  gmail: "singhtanjan9024@gmail.com",
-  gitlab: "https://gitlab.com/rekid46",
+  gmail: "singhranjan9024@gmail.com",
+  gitlab: "https://gitlab.com/opswithranjan",
   facebook: "https://www.facebook.com/lifeofranjan",
-  medium: "https://medium.com/@rekid46",
-  stackoverflow: "https://stackoverflow.com",
+  medium: "https://medium.com/@opswithranjan",
+  stackoverflow: "", // TODO: add your real Stack Overflow profile URL, or leave empty to hide the icon
   instagram: "https://instagram.com/simply.ranjan",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
@@ -62,14 +62,16 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "UNSTOPPABLE DEVSECOPS ENGINEER DETERMINED TO CONQUER EVERY EMERGING TECH STACK!",
+  subTitle: "DEVSECOPS ENGINEER & CUSTOMER-OBSESSED SENIOR SUPPORT ENGINEER WHO TURNS COMPLEX CLOUD PROBLEMS INTO SHIPPED SOLUTIONS",
   skills: [
     emoji(
-      "⚡ With a keen eye for automation, I continually refine our processes to ensure swift, seamless, and stable releases."
+      "⚡ Automate and harden CI/CD pipelines so teams ship faster, safer, and more reliably."
     ),
-    emoji("⚡ Navigating the nexus of development and operations, I build and streamline efficient deployment pipelines."),
     emoji(
-      "⚡ At the vanguard of DevOps, I foster a culture of collaboration and rapid delivery within our software ecosystem."
+      "⚡ Solve complex customer challenges across DevOps, package/artifact management, and cloud integrations."
+    ),
+    emoji(
+      "⚡ Bridge engineering and customers, turning tricky technical issues into clear fixes and lasting success."
     )
   ],
 
@@ -146,7 +148,7 @@ const educationInfo = {
       schoolName: "Poornima Institute of Engineering and Technology",
       logo: pietLogo,
       subHeader: "Bachelor of Technology in Computer Science",
-      duration: "Augest 2018 - July 2022",
+      duration: "August 2018 - July 2022",
       desc: "Participated in the research of DevSecops Trends and published 3 papers.",
       descBullets: [
         "Ranked top 10% in the program.",
@@ -183,25 +185,25 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Technical Support Engineer",
+      role: "Senior Technical Support Engineer",
       company: "Cloudsmith",
       companylogo: csLogo,
-      date: "August 2024 – Present",
-      desc: "I’m a Customer Technical Support and Customer Success Engineer at Cloudsmith, where I tackle complex customer challenges, build seamless DevOps integrations, and dive into development to enhance package management workflows.",
+      date: "August 2024 - Present",
+      desc: "I'm a Senior Technical Support & Customer Success Engineer at Cloudsmith, where I solve complex customer challenges across CI/CD, package management, and DevOps integrations. I also build internal tooling and automation that improves how features are supported, helping customers get a smoother and more reliable experience.",
     },
     {
       role: "DevSecOps Engineer",
       company: "Fev India Pvt Ltd",
       companylogo: fev11Logo,
-      date: "April 2022 – August 2024",
-      desc: "I streamlines the development and operations pipeline, ensuring efficient deployment and management of software solutions critical to automotive design, production, and testing processes. I ensure that the secure development and deployment of automotive software solutions, maintaining best-in-class security practices within the DevOps lifecycle, and mitigating cybersecurity risks in line with industry standards and regulations.",
+      date: "April 2022 - August 2024",
+      desc: "I streamlined the development and operations pipeline, ensuring efficient deployment and management of software solutions critical to automotive design, production, and testing processes. I ensured the secure development and deployment of automotive software solutions, maintaining best-in-class security practices within the DevOps lifecycle and mitigating cybersecurity risks in line with industry standards and regulations.",
     },
     {
       role: "DevSecOps Engineer",
       company: "Medius Technologies Pvt Ltd",
       companylogo: mediusLogo,
-      date: "Jan 2021 – Apr 2022",
-      desc: "I've spearhead the integration of development, security, and operations, ensuring the secure and efficient deployment of our cloud-based debt management solutions. I've maintained security controls, conduct risk assessments, automate deployment processes, and guide the team in implementing secure coding practices."
+      date: "Jan 2021 - Apr 2022",
+      desc: "I spearheaded the integration of development, security, and operations, ensuring the secure and efficient deployment of our cloud-based debt management solutions. I maintained security controls, conducted risk assessments, automated deployment processes, and guided the team in implementing secure coding practices."
     }
   ]
 };
@@ -210,7 +212,7 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  showGithubProfile: "false", // Set "true" only when GitHub data is fetched at build time (see README env setup); otherwise it triggers a failed /profile.json fetch
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -218,8 +220,19 @@ const openSource = {
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "STARTUPS AND COMPANIES I'VE HELPED BUILD THEIR TECH",
   projects: [
+    {
+      image: csLogo,
+      projectName: "Serviceability",
+      projectDesc: "An internal initiative I designed and built to make every product feature easier to support. It pairs a lightweight review framework with automation that streamlines support workflows, surfaces health signals, and keeps quality high as features ship. The goal is simple: features that reach customers ready to support, with clear visibility instead of guesswork.",
+      footerLink: [
+        {
+          name: "About Cloudsmith",
+          url: "https://cloudsmith.com/"
+        }
+      ]
+    },
     {
       image: medius1Image,
       projectName: "TheMedius.ai",
@@ -239,7 +252,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: "https://raje.pro"
+          url: "https://github.com/opswithranjan/Portfolio"
         }
       ]
     }
@@ -261,12 +274,10 @@ const achievementSection = {
       subtitle:
         "Demonstrated mastery in implementing DevOps practices on the Microsoft Azure platform, showcasing advanced skills in automating workflows, optimizing delivery pipelines, and ensuring seamless collaboration between development and operations teams.",
       image: msftExpertImage,
-      imageAlt: "Az-400 logo",
+      imageAlt: "Microsoft Certified DevOps Engineer Expert badge",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        }
+        // TODO: add your real AZ-400 verification/credential URL, then restore the button:
+        // {name: "Verify", url: "https://learn.microsoft.com/api/credentials/share/..."}
       ]
     },
     {
@@ -274,12 +285,10 @@ const achievementSection = {
       subtitle:
         "Validated proficiency in deploying, managing, and maintaining Azure resources, demonstrating expertise in implementing and monitoring cloud solutions on the Microsoft Azure platform.",
       image: azureAdminImage,
-      imageAlt: "Google Assistant Action Logo",
+      imageAlt: "Microsoft Azure Administrator Associate badge",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
+        // TODO: add your real AZ-104 verification/credential URL, then restore the button:
+        // {name: "Verify", url: "https://learn.microsoft.com/api/credentials/share/..."}
       ]
     },
     
@@ -287,24 +296,20 @@ const achievementSection = {
       title: "Linux Foundation Certified Kubernetes Administrator (CKA)",
       subtitle: "Validated proficiency in Kubernetes administration, showcasing skills in deploying and managing containerized applications.",
       image: ckaImage,
-      imageAlt: "Logo",
+      imageAlt: "Certified Kubernetes Administrator (CKA) badge",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://raje.pro/"
-        }
+        // TODO: add your real CKA verification URL (credly.com/badges/...), then restore the button:
+        // {name: "Verify", url: "https://www.credly.com/badges/..."}
       ]
     },
     {
       title: "Linux Foundation Certified Kubernetes Security Specialist (CKS)",
       subtitle: "Recognized expertise in securing Kubernetes clusters and ensuring robust containerized application environments.",
       image: cksImage,
-      imageAlt: "Logo",
+      imageAlt: "Certified Kubernetes Security Specialist (CKS) badge",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://raje.pro/"
-        }
+        // TODO: add your real CKS verification URL (credly.com/badges/...), then restore the button:
+        // {name: "Verify", url: "https://www.credly.com/badges/..."}
       ]
     }
   ],
@@ -317,21 +322,9 @@ const blogSection = {
   title: "Blogs",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
+  displayMediumBlogs: "false", // Set "true" only when MEDIUM_USERNAME is configured at build time; otherwise it triggers a failed /blogs.json fetch
+  // TODO: add your own posts here, or set MEDIUM_USERNAME in env to auto-fetch, then flip display to true
+  blogs: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -343,14 +336,8 @@ const talkSection = {
     "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
   ),
 
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest",
-      slides_url: "https://bit.ly/slides",
-      event_url: "https://www.facebook.com//"
-    }
-  ],
+  // TODO: add your own talks here, then flip display to true
+  talks: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -360,10 +347,8 @@ const podcastSection = {
   title: emoji("Podcast 🎙️"),
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/"
-  ],
+  // TODO: add your podcast embed link(s) here, then flip display to true
+  podcast: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -378,7 +363,7 @@ const contactInfo = {
 // Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
+  userName: "", // TODO: your X/Twitter username without @, then set display to true
   display: false // Set true to display this section, defaults to false
 };
 
