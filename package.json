@@ -3,36 +3,30 @@
   "name": "developerfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
   "dependencies": {
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "gh-pages": "^2.1.1",
-    "jest-canvas-mock": "^2.3.1",
-    "node": "^20.2.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "@emotion/react": "^11.14.0",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
+    "react": "^19.2.7",
+    "react-awesome-reveal": "^4.3.1",
+    "react-dom": "^19.2.7",
     "react-easy-emoji": "^1.8.1",
-    "react-headroom": "^3.0.0",
-    "@lottiefiles/react-lottie-player": "^3.5.4",
-    "framer-motion": "^4.1.17",
-    "react-reveal": "^1.2.2",
-    "react-scripts": "^5.0.1",
-    "react-test-renderer": "^16.10.2",
-    "react-twitter-embed": "3.0.3",
-    "sass": "^1.32.8"
+    "sass": "^1.101.0"
   },
   "scripts": {
     "predeploy": "npm run build",
-    "start": "node fetch.js && react-scripts start",
-    "build": "node fetch.js && react-scripts build",
+    "dev": "node fetch.cjs && vite",
+    "start": "node fetch.cjs && vite",
+    "build": "node fetch.cjs && vite build",
+    "preview": "vite preview",
     "deploy": "gh-pages -b master -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
     "check-format": "prettier -c \"./**/*.{js,css,json,scss}\""
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -52,7 +46,17 @@
     ]
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "prettier": "^2.3.1"
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^6.0.3",
+    "dotenv": "^17.4.2",
+    "gh-pages": "^6.3.0",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.8.4",
+    "vite": "^8.1.0",
+    "vitest": "^4.1.9",
+    "vitest-canvas-mock": "^1.1.4"
   }
 }

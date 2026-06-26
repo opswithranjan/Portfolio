@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import Headroom from "react-headroom";
+import Headroom from "../headroom/Headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
