@@ -224,8 +224,8 @@ const bigProjects = {
   projects: [
     {
       image: csLogo,
-      projectName: "Serviceability",
-      projectDesc: "An internal initiative I designed and built to make every product feature easier to support. It pairs a lightweight review framework with automation that streamlines support workflows, surfaces health signals, and keeps quality high as features ship. The goal is simple: features that reach customers ready to support, with clear visibility instead of guesswork.",
+      projectName: "Serviceability at Cloudsmith",
+      projectDesc: "An internal serviceability initiative I designed and built at Cloudsmith to make every product feature easier to support. It pairs a lightweight review framework with automation that streamlines support workflows, surfaces health signals, and keeps quality high as features ship. The goal is simple: features that reach customers ready to support, with clear visibility instead of guesswork.",
       footerLink: [
         {
           name: "About Cloudsmith",
@@ -240,7 +240,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: "https://themedius.ai/"
+          url: "https://themedius.in/"
         }
         //  you can add extra buttons here.
       ]
