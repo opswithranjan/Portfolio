@@ -5,7 +5,7 @@
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
-// Image assets (ESM imports — Vite bundles and hashes these)
+// Image assets (ESM imports, bundled and hashed by Vite)
 import pietLogo from "./assets/images/piet.jpg";
 import csLogo from "./assets/images/cs.png";
 import fev11Logo from "./assets/images/fev11.jpeg";
@@ -35,7 +35,7 @@ const greeting = {
   username: "Ranjan Singh",
   title: "Hi all, I'm Ranjan",
   subTitle: emoji(
-    "An enthusiastic DevSecOps Engineer 🚀 leveraging extensive experience in building secure and scalable cloud infrastructures with cutting-edge tools such as Docker, Kubernetes, Jenkins, Terraform, and AWS/GCP/Azure. Proficient in automating security, development, and operations tasks to drive faster time-to-market, improve product quality, and ensure robust cybersecurity controls."
+    "A DevSecOps engineer turned Senior Technical Support & Customer Success Engineer 🚀. I build secure, scalable cloud infrastructure with Docker, Kubernetes, Terraform, and AWS/GCP/Azure, and now help teams ship reliably by solving complex challenges across CI/CD, package management, and DevOps integrations at Cloudsmith."
   ),
   resumeLink:
     "https://drive.google.com/drive/folders/1ARoC2Lph1zdj57yz_xajGLuWjxtAxsOL?usp=sharing", // Set to empty to hide the button
@@ -62,14 +62,16 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "UNSTOPPABLE DEVSECOPS ENGINEER DETERMINED TO CONQUER EVERY EMERGING TECH STACK!",
+  subTitle: "DEVSECOPS ENGINEER & CUSTOMER-OBSESSED SENIOR SUPPORT ENGINEER WHO TURNS COMPLEX CLOUD PROBLEMS INTO SHIPPED SOLUTIONS",
   skills: [
     emoji(
-      "⚡ With a keen eye for automation, I continually refine our processes to ensure swift, seamless, and stable releases."
+      "⚡ Automate and harden CI/CD pipelines so teams ship faster, safer, and more reliably."
     ),
-    emoji("⚡ Navigating the nexus of development and operations, I build and streamline efficient deployment pipelines."),
     emoji(
-      "⚡ At the vanguard of DevOps, I foster a culture of collaboration and rapid delivery within our software ecosystem."
+      "⚡ Solve complex customer challenges across DevOps, package/artifact management, and cloud integrations."
+    ),
+    emoji(
+      "⚡ Bridge engineering and customers, turning tricky technical issues into clear fixes and lasting success."
     )
   ],
 
@@ -183,25 +185,25 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Technical Support Engineer",
+      role: "Senior Technical Support Engineer",
       company: "Cloudsmith",
       companylogo: csLogo,
-      date: "August 2024 – Present",
-      desc: "I’m a Customer Technical Support and Customer Success Engineer at Cloudsmith, where I tackle complex customer challenges, build seamless DevOps integrations, and dive into development to enhance package management workflows.",
+      date: "August 2024 - Present",
+      desc: "I'm a Senior Technical Support & Customer Success Engineer at Cloudsmith, where I solve complex customer challenges across CI/CD, package management, and DevOps integrations. I designed and built Cloudsmith's Serviceability program: a Design for Serviceability (DfS) framework with an automation layer that scores every feature before launch and tracks support health across Linear, Zendesk, Slack, and a live dashboard.",
     },
     {
       role: "DevSecOps Engineer",
       company: "Fev India Pvt Ltd",
       companylogo: fev11Logo,
-      date: "April 2022 – August 2024",
-      desc: "I streamlines the development and operations pipeline, ensuring efficient deployment and management of software solutions critical to automotive design, production, and testing processes. I ensure that the secure development and deployment of automotive software solutions, maintaining best-in-class security practices within the DevOps lifecycle, and mitigating cybersecurity risks in line with industry standards and regulations.",
+      date: "April 2022 - August 2024",
+      desc: "I streamlined the development and operations pipeline, ensuring efficient deployment and management of software solutions critical to automotive design, production, and testing processes. I ensured the secure development and deployment of automotive software solutions, maintaining best-in-class security practices within the DevOps lifecycle and mitigating cybersecurity risks in line with industry standards and regulations.",
     },
     {
       role: "DevSecOps Engineer",
       company: "Medius Technologies Pvt Ltd",
       companylogo: mediusLogo,
-      date: "Jan 2021 – Apr 2022",
-      desc: "I've spearhead the integration of development, security, and operations, ensuring the secure and efficient deployment of our cloud-based debt management solutions. I've maintained security controls, conduct risk assessments, automate deployment processes, and guide the team in implementing secure coding practices."
+      date: "Jan 2021 - Apr 2022",
+      desc: "I spearheaded the integration of development, security, and operations, ensuring the secure and efficient deployment of our cloud-based debt management solutions. I maintained security controls, conducted risk assessments, automated deployment processes, and guided the team in implementing secure coding practices."
     }
   ]
 };
@@ -220,6 +222,17 @@ const bigProjects = {
   title: "Big Projects",
   subtitle: "STARTUPS AND COMPANIES I'VE HELPED BUILD THEIR TECH",
   projects: [
+    {
+      image: csLogo,
+      projectName: "Serviceability at Cloudsmith",
+      projectDesc: "I designed and built Cloudsmith's Serviceability program: a Design for Serviceability (DfS) framework and the automation behind it. Every feature is scored 1 to 4 across six areas (documentation, observability, diagnostics, customer communication, training, and feedback loop) before it ships. I built the automation layer that scans triggers from Linear, tracks SLAs, posts daily status reports to Slack, runs Claude-powered DfS scoring, collects Zendesk ticket metrics (volume, time to resolve, escalation rate), and surfaces the full register with live scores and grades on a web dashboard. The result: features reach customers ready to support, with measurable health instead of guesswork.",
+      footerLink: [
+        {
+          name: "About Cloudsmith",
+          url: "https://cloudsmith.com/"
+        }
+      ]
+    },
     {
       image: medius1Image,
       projectName: "TheMedius.ai",
@@ -309,7 +322,7 @@ const blogSection = {
   title: "Blogs",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+  displayMediumBlogs: "false", // Set "true" only when MEDIUM_USERNAME is configured at build time; otherwise it triggers a failed /blogs.json fetch
   // TODO: add your own posts here, or set MEDIUM_USERNAME in env to auto-fetch, then flip display to true
   blogs: [],
   display: false // Set false to hide this section, defaults to true

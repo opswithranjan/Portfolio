@@ -15,6 +15,11 @@ export default function Projects() {
   const {isDark} = useContext(StyleContext);
 
   useEffect(() => {
+    // Only fetch GitHub data when the section is enabled and the data exists
+    // (profile.json is produced at build time by fetch.cjs when USE_GITHUB_DATA=true).
+    if (!openSource.display) {
+      return;
+    }
     const getRepoData = () => {
       fetch("/profile.json")
         .then(result => {
