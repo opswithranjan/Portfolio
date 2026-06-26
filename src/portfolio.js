@@ -5,6 +5,18 @@
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
+// Image assets (ESM imports — Vite bundles and hashes these)
+import pietLogo from "./assets/images/piet.jpg";
+import csLogo from "./assets/images/cs.png";
+import fev11Logo from "./assets/images/fev11.jpeg";
+import mediusLogo from "./assets/images/medius.avif";
+import medius1Image from "./assets/images/medius1.png";
+import devopsfolioImage from "./assets/images/devopsfolio.png";
+import msftExpertImage from "./assets/images/microsoft-certified-expert-badge.png";
+import azureAdminImage from "./assets/images/azure-administrator.png";
+import ckaImage from "./assets/images/CKA.png";
+import cksImage from "./assets/images/CKS.png";
+
 // Splash Screen
 
 const splashScreen = {
@@ -132,7 +144,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Poornima Institute of Engineering and Technology",
-      logo: require("./assets/images/piet.jpg"),
+      logo: pietLogo,
       subHeader: "Bachelor of Technology in Computer Science",
       duration: "Augest 2018 - July 2022",
       desc: "Participated in the research of DevSecops Trends and published 3 papers.",
@@ -173,21 +185,21 @@ const workExperiences = {
     {
       role: "Technical Support Engineer",
       company: "Cloudsmith",
-      companylogo: require("./assets/images/cs.png"),
+      companylogo: csLogo,
       date: "August 2024 – Present",
       desc: "I’m a Customer Technical Support and Customer Success Engineer at Cloudsmith, where I tackle complex customer challenges, build seamless DevOps integrations, and dive into development to enhance package management workflows.",
     },
     {
       role: "DevSecOps Engineer",
       company: "Fev India Pvt Ltd",
-      companylogo: require("./assets/images/fev11.jpeg"),
+      companylogo: fev11Logo,
       date: "April 2022 – August 2024",
       desc: "I streamlines the development and operations pipeline, ensuring efficient deployment and management of software solutions critical to automotive design, production, and testing processes. I ensure that the secure development and deployment of automotive software solutions, maintaining best-in-class security practices within the DevOps lifecycle, and mitigating cybersecurity risks in line with industry standards and regulations.",
     },
     {
       role: "DevSecOps Engineer",
       company: "Medius Technologies Pvt Ltd",
-      companylogo: require("./assets/images/medius.avif"),
+      companylogo: mediusLogo,
       date: "Jan 2021 – Apr 2022",
       desc: "I've spearhead the integration of development, security, and operations, ensuring the secure and efficient deployment of our cloud-based debt management solutions. I've maintained security controls, conduct risk assessments, automate deployment processes, and guide the team in implementing secure coding practices."
     }
@@ -209,7 +221,7 @@ const bigProjects = {
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {
-      image: require("./assets/images/medius1.png"),
+      image: medius1Image,
       projectName: "TheMedius.ai",
       projectDesc: "Medius is at the forefront of debt management and envisions advancing the economy by empowering financial institutions with practical, technologically advanced solutions for managing their loan accounts. Our cloud platform, built on award-winning machine learning and a robust strategy engine, helps resolve NPAs and provides an empathetic collection experience. Our team of recovery attorneys developed a technology that allows banks not only to foresee but also control risks, thanks to automated pre-litigation and litigation services powered by pre-approved terminology. We're inspired to reduce risks by providing impactful solutions, and we've built a fully automated cloud collection software trusted by recognized banks, NBFCs, and lenders to deliver end-to-end, SaaS-based, collection management tools integrated with legal workflows.",
       footerLink: [
@@ -221,7 +233,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/devopsfolio.png"),
+      image: devopsfolioImage,
       projectName: "DevSecOpsFolio",
       projectDesc: "A clean, beautiful and responsive portfolio template for DevSecOps Engineers! It allows users to showcase their skills, education, work experience, open-source projects, achievements, blogs, and more. The template, built with advanced technologies like React and Node.js, can be personalized as desired, with an ability to link to GitHub and Medium accounts. It is highly user-friendly, providing instructions for setting up and running the project locally for development and testing. The portfolio can also be dockerized for efficient deployment​.",
       footerLink: [
@@ -248,7 +260,7 @@ const achievementSection = {
       title: "Microsoft Azure Certified DevOps Engineer Expert",
       subtitle:
         "Demonstrated mastery in implementing DevOps practices on the Microsoft Azure platform, showcasing advanced skills in automating workflows, optimizing delivery pipelines, and ensuring seamless collaboration between development and operations teams.",
-      image: require("./assets/images/microsoft-certified-expert-badge.png"),
+      image: msftExpertImage,
       imageAlt: "Az-400 logo",
       footerLink: [
         {
@@ -261,7 +273,7 @@ const achievementSection = {
       title: "Microsoft Azure Administrator Associate",
       subtitle:
         "Validated proficiency in deploying, managing, and maintaining Azure resources, demonstrating expertise in implementing and monitoring cloud solutions on the Microsoft Azure platform.",
-      image: require("./assets/images/azure-administrator.png"),
+      image: azureAdminImage,
       imageAlt: "Google Assistant Action Logo",
       footerLink: [
         {
@@ -274,7 +286,7 @@ const achievementSection = {
     {
       title: "Linux Foundation Certified Kubernetes Administrator (CKA)",
       subtitle: "Validated proficiency in Kubernetes administration, showcasing skills in deploying and managing containerized applications.",
-      image: require("./assets/images/CKA.png"),
+      image: ckaImage,
       imageAlt: "Logo",
       footerLink: [
         {
@@ -286,7 +298,7 @@ const achievementSection = {
     {
       title: "Linux Foundation Certified Kubernetes Security Specialist (CKS)",
       subtitle: "Recognized expertise in securing Kubernetes clusters and ensuring robust containerized application environments.",
-      image: require("./assets/images/CKS.png"),
+      image: cksImage,
       imageAlt: "Logo",
       footerLink: [
         {

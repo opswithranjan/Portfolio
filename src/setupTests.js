@@ -1,5 +1,17 @@
-import "jest-canvas-mock";
-import {configure} from "enzyme";
-import Adapter from "enzyme-adapter-react-18";
+import "vitest-canvas-mock";
+import "@testing-library/jest-dom";
 
-configure({adapter: new Adapter()});
+// jsdom does not implement matchMedia; Main reads it at render time.
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: () => {}, // Deprecated
+    removeListener: () => {}, // Deprecated
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => {}
+  })
+});
