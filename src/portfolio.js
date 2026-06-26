@@ -158,25 +158,39 @@ const educationInfo = {
   ]
 };
 
-// Your top 3 proficient stacks/tech experience
+// Tech stack, grouped by category and shown as chips.
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
-  experience: [
+  viewSkillBars: true, // Set false to hide this section
+  title: "Tech Stack",
+  subtitle: "TOOLS AND TECHNOLOGIES I WORK WITH",
+  categories: [
     {
-      Stack: "Automation", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      name: "Cloud",
+      skills: ["AWS", "Azure", "GCP"]
     },
     {
-      Stack: "Security",
-      progressPercentage: "80%"
+      name: "Containers & Orchestration",
+      skills: ["Docker", "Kubernetes", "Helm"]
     },
     {
-      Stack: "Collaboration",
-      progressPercentage: "90%"
+      name: "CI/CD & Automation",
+      skills: ["Jenkins", "GitHub Actions", "Azure DevOps", "GitLab CI"]
+    },
+    {
+      name: "Infrastructure as Code",
+      skills: ["Terraform", "Ansible"]
+    },
+    {
+      name: "Languages & Scripting",
+      skills: ["Python", "Bash"]
+    },
+    {
+      name: "Security & Packaging",
+      skills: ["DevSecOps", "Git", "Cloudsmith"]
     }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false // Set true to display codersrank badges section
 };
 
 // Work experience section

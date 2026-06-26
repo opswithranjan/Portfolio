@@ -11,20 +11,26 @@ export default function StackProgress() {
       <Fade direction="up" duration={1000} triggerOnce>
         <div className="skills-container">
           <div className="skills-bar">
-            <h1 className="skills-heading">Proficiency</h1>
-            {techStack.experience.map((exp, i) => {
-              const progressStyle = {
-                width: exp.progressPercentage
-              };
-              return (
-                <div key={i} className="skill">
-                  <p>{exp.Stack}</p>
-                  <div className="meter">
-                    <span style={progressStyle}></span>
+            <h1 className="skills-heading">{techStack.title}</h1>
+            {techStack.subtitle ? (
+              <p className="tech-stack-subtitle subTitle">
+                {techStack.subtitle}
+              </p>
+            ) : null}
+            <div className="tech-stack-categories">
+              {techStack.categories.map((category, i) => (
+                <div className="tech-category" key={i}>
+                  <h2 className="tech-category-title">{category.name}</h2>
+                  <div className="tech-chips">
+                    {category.skills.map((skill, j) => (
+                      <span className="tech-chip" key={j}>
+                        {skill}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
 
           <div className="skills-image">

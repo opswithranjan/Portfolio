@@ -1,31 +1,69 @@
 @import "../../_globalColor";
 
-.meter {
-  height: 20px;
-  position: relative;
-  background: $progressBarBackground;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
+.tech-stack-subtitle {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.4;
 }
-.meter > span {
-  display: block;
-  height: 100%;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: $progressBarSpanBG;
-  position: relative;
-  overflow: hidden;
+
+.tech-stack-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
-.skill {
-  line-height: 3.5vw;
+
+.tech-category-title {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: $subTitle;
+  margin: 0 0 0.6rem 0;
 }
-.skill-bars {
-  font-size: 28px;
-  width: 40%;
+
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
+
+.tech-chip {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: $lightBackground3;
+  border: 1px solid $lightBorder1;
+  font-size: 15px;
+  font-weight: 500;
+  color: $textColor;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tech-chip:hover {
+  transform: translateY(-2px);
+  border-color: $buttonColor;
+  color: $buttonColor;
+  box-shadow: 0 4px 12px $lightBoxShadow;
+}
+
+.dark-mode .tech-category-title {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-mode .tech-chip {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: $textColorDark;
+}
+
+.dark-mode .tech-chip:hover {
+  border-color: $buttonHover;
+  color: $buttonHover;
+}
+
 .skills-container {
   display: flex;
   width: 90%;
