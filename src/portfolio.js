@@ -189,7 +189,7 @@ const workExperiences = {
       company: "Cloudsmith",
       companylogo: csLogo,
       date: "August 2024 - Present",
-      desc: "I'm a Senior Technical Support & Customer Success Engineer at Cloudsmith, where I solve complex customer challenges across CI/CD, package management, and DevOps integrations. I designed and built Cloudsmith's Serviceability program: a Design for Serviceability (DfS) framework with an automation layer that scores every feature before launch and tracks support health across Linear, Zendesk, Slack, and a live dashboard.",
+      desc: "I'm a Senior Technical Support & Customer Success Engineer at Cloudsmith, where I solve complex customer challenges across CI/CD, package management, and DevOps integrations. I also build internal tooling and automation that improves how features are supported, helping customers get a smoother and more reliable experience.",
     },
     {
       role: "DevSecOps Engineer",
@@ -224,8 +224,8 @@ const bigProjects = {
   projects: [
     {
       image: csLogo,
-      projectName: "Serviceability at Cloudsmith",
-      projectDesc: "I designed and built Cloudsmith's Serviceability program: a Design for Serviceability (DfS) framework and the automation behind it. Every feature is scored 1 to 4 across six areas (documentation, observability, diagnostics, customer communication, training, and feedback loop) before it ships. I built the automation layer that scans triggers from Linear, tracks SLAs, posts daily status reports to Slack, runs Claude-powered DfS scoring, collects Zendesk ticket metrics (volume, time to resolve, escalation rate), and surfaces the full register with live scores and grades on a web dashboard. The result: features reach customers ready to support, with measurable health instead of guesswork.",
+      projectName: "Serviceability",
+      projectDesc: "An internal initiative I designed and built to make every product feature easier to support. It pairs a lightweight review framework with automation that streamlines support workflows, surfaces health signals, and keeps quality high as features ship. The goal is simple: features that reach customers ready to support, with clear visibility instead of guesswork.",
       footerLink: [
         {
           name: "About Cloudsmith",
